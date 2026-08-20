@@ -10,7 +10,7 @@ if (formulario) {
             mensagem: document.querySelector("#mensagem").value
         };
         try {
-            const resposta = await fetch("/api/send-email", {
+            const resposta = await fetch("http://localhost:3000/api/contato", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
