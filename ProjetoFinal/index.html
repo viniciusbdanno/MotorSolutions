@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorSolutions | IoT para Monitoramento Industrial</title>
+    <link rel="icon" type="image/png" href="Imagens/Favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap">
+</head>
+
+<body>
+    <!--==========================================================================================-->
+    <!-- HEADER -->
+    <header>
+        <section>
+            <div class="header"><img src="Imagens/Logo.png" alt="Logo MotorSolutions">
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#solucoes">Soluções</a></li>
+                    </ul><button id="btn2" type="button">Contato</button>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <!--==========================================================================================-->
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-label"><span></span> MONITORAMENTO INDUSTRIAL INTELIGENTE</div>
+            <h1><span id="texto-digitando"></span><span class="cursor">|</span></h1>
+            <p>Monitore o desempenho dos seus motores em tempo real e antecipe possíveis falhas antes que elas parem sua
+                operação.</p>
+            <button class="hero-btn" type="button" id="heroContato">Fale com a MotorSolutions</button>
+        </div>
+        <div class="hero-gallery">
+            <div class="hero-card hero-card-motor"><img src="Imagens/Motor.png" alt="Motor industrial"></div>
+            <div class="hero-card hero-card-iot"><img src="Imagens/Sistema.png" alt="Sistema IoT"></div>
+            <div class="hero-card hero-card-sensor"><img src="Imagens/Sensor.png" alt="Sensor industrial"></div>
+            <div class="hero-card hero-card-data"><img src="Imagens/Dados.png" alt="Monitoramento de dados"></div>
+        </div>
+    </section>
+    <!--==========================================================================================-->
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+        <div class="servicos-container">
+            <div class="servicos-intro"><span class="servicos-label"><span></span> NOSSOS SERVIÇOS </span>
+                <h2>Dados que trabalham<br>pela sua operação.</h2>
+                <p>Monitoramos os principais indicadores dos seus motores para transformar dados em informações úteis
+                    para sua operação.</p>
+            </div>
+            <div class="servicos-conteudo">
+                <div class="lista-servicos"><button class="servico-item ativo" data-servico="motor" type="button"><span
+                            class="servico-numero">01</span>
+                        <div class="servico-info">
+                            <h3>Monitoramento de motores</h3>
+                            <p>Acompanhe continuamente o comportamento dos seus equipamentos.</p>
+                        </div><span class="servico-seta">↗</span>
+                    </button><button class="servico-item" data-servico="vibracao" type="button"><span
+                            class="servico-numero">02</span>
+                        <div class="servico-info">
+                            <h3>Vibração</h3>
+                            <p>Identifique alterações no funcionamento antes que elas se tornem falhas.</p>
+                        </div><span class="servico-seta">↗</span>
+                    </button><button class="servico-item" data-servico="temperatura" type="button"><span
+                            class="servico-numero">03</span>
+                        <div class="servico-info">
+                            <h3>Temperatura</h3>
+                            <p>Monitore o aquecimento dos equipamentos em tempo real.</p>
+                        </div><span class="servico-seta">↗</span>
+                    </button><button class="servico-item" data-servico="dados" type="button"><span
+                            class="servico-numero">04</span>
+                        <div class="servico-info">
+                            <h3>Dados em tempo real</h3>
+                            <p>Transforme dados dos equipamentos em informações para sua operação.</p>
+                        </div><span class="servico-seta">↗</span>
+                    </button></div>
+                <div class="painel-monitoramento">
+                    <div class="painel-topo">
+                        <div><span class="painel-legenda" id="painel-legenda">MONITORAMENTO</span>
+                            <h3 id="painel-titulo">Motor 01</h3>
+                        </div><span class="status" id="painel-status"><span></span> ONLINE </span>
+                    </div>
+                    <div class="painel-dados">
+                        <div class="dado"><span id="dado-1-nome">Temperatura</span><strong
+                                id="dado-1-valor">68°</strong>
+                            <div class="barra"><span id="barra-1"></span></div>
+                        </div>
+                        <div class="dado"><span id="dado-2-nome">Vibração</span><strong id="dado-2-valor">2.4
+                                <small>mm/s</small></strong>
+                            <div class="barra"><span id="barra-2"></span></div>
+                        </div>
+                    </div>
+                    <div class="grafico">
+                        <div class="grafico-header"><span id="grafico-nome">Desempenho</span><span>Últimas 24h</span>
+                        </div>
+                        <div class="grafico-linhas"><span></span><span></span><span></span><span></span></div>
+                        <svg viewBox="0 0 500 130" preserveAspectRatio="none">
+                            <path id="grafico-linha"
+                                d="M0 95 C30 90, 45 80, 70 84 S110 65, 135 73 S170 55, 200 61 S230 45, 260 54 S300 65, 325 50 S360 40, 390 48 S430 30, 455 40 S480 25, 500 30"
+                                fill="none" stroke="currentColor" stroke-width="3"></path>
+                        </svg>
+                    </div>
+                    <div class="painel-footer"><span>Última atualização</span><strong
+                            id="painel-atualizacao">Agora</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==========================================================================================-->
+    <!-- SOLUÇÕES -->
+    <section class="solucoes" id="solucoes">
+        <div class="solucoes-container">
+            <div class="solucoes-intro"><span class="solucoes-label"><span></span> A SOLUÇÃO </span>
+                <h2>Do motor à decisão. <span>Sem perder nenhum dado.</span></h2>
+                <p>A MotorSolutions conecta os equipamentos da sua operação a uma camada inteligente de monitoramento,
+                    transformando sinais dos motores em informações que ajudam sua equipe a agir antes que o problema
+                    aconteça.</p>
+            </div>
+            <div class="solucoes-fluxo">
+                <div class="solucao-etapas"><button class="solucao-etapa ativa" data-solucao="motor" type="button"><span
+                            class="etapa-numero">01</span><span class="etapa-icone">M</span>
+                        <div><strong>Motor</strong><small>O equipamento</small></div>
+                    </button><button class="solucao-etapa" data-solucao="sensores" type="button"><span
+                            class="etapa-numero">02</span><span class="etapa-icone">S</span>
+                        <div><strong>Sensores</strong><small>Os sinais</small></div>
+                    </button><button class="solucao-etapa" data-solucao="conexao" type="button"><span
+                            class="etapa-numero">03</span><span class="etapa-icone">I</span>
+                        <div><strong>IoT</strong><small>A conexão</small></div>
+                    </button><button class="solucao-etapa" data-solucao="dados" type="button"><span
+                            class="etapa-numero">04</span><span class="etapa-icone">D</span>
+                        <div><strong>Dados</strong><small>A informação</small></div>
+                    </button><button class="solucao-etapa" data-solucao="decisao" type="button"><span
+                            class="etapa-numero">05</span><span class="etapa-icone">✓</span>
+                        <div><strong>Decisão</strong><small>A ação</small></div>
+                    </button></div>
+                <div class="solucoes-painel">
+                    <div class="solucoes-painel-topo">
+                        <div><span id="solucao-status">ETAPA 01</span>
+                            <h3 id="solucao-titulo">Motor</h3>
+                        </div>
+                        <div class="solucao-ponto"><span></span> SISTEMA ATIVO </div>
+                    </div>
+                    <div class="solucao-visual">
+                        <div class="visual-grade"></div>
+                        <div class="visual-circulo circulo-1"></div>
+                        <div class="visual-circulo circulo-2"></div>
+                        <div class="visual-equipamento"><span id="visual-letra">M</span></div>
+                        <div class="visual-linha linha-1"></div>
+                        <div class="visual-linha linha-2"></div>
+                        <div class="visual-linha linha-3"></div>
+                        <div class="visual-dado dado-a"><span id="visual-dado-1">ROTAÇÃO</span><strong
+                                id="visual-valor-1">1.780</strong></div>
+                        <div class="visual-dado dado-b"><span id="visual-dado-2">STATUS</span><strong
+                                id="visual-valor-2">NORMAL</strong></div>
+                    </div>
+                    <div class="solucao-descricao">
+                        <p id="solucao-descricao">Tudo começa no equipamento. A solução acompanha o comportamento do
+                            motor e cria uma base contínua de informações sobre sua operação.</p>
+                        <div class="solucao-indicador"><span id="solucao-progresso"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==========================================================================================-->
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="contato-container">
+            <div class="contato-info">
+                <span class="contato-label"><span></span> ENTRE EM CONTATO</span>
+                <h2>Vamos conversar sobre <span>sua operação.</span></h2>
+                <p>Quer entender como o monitoramento inteligente pode ajudar sua operação? Envie suas informações e
+                    nossa equipe entrará em contato.</p>
+                <div class="contato-status"><span class="status-ponto"></span>
+                    <div><strong>Sistema pronto para sua operação</strong><small>Monitoramento • Dados • IoT</small>
+                    </div>
+                </div>
+                <div class="contato-linhas"><span></span><span></span><span></span></div>
+            </div>
+            <div class="contato-form-area">
+                <form class="form-contato">
+                    <div class="form-topo"><span>FALE COM A GENTE</span>
+                        <h3>Conte-nos sobre seu projeto.</h3>
+                    </div>
+                    <div class="campo"><input type="text" id="nome" name="nome"
+                            placeholder="Nome Completo"><span>*</span></div>
+                    <div class="campo"><input type="email" id="email" name="email" placeholder="Email"><span>*</span>
+                    </div>
+                    <div class="campo"><input type="text" id="empresa" name="empresa" placeholder="Empresa"></div>
+                    <div class="campo"><input type="text" id="interesse" name="interesse"
+                            placeholder="Interesse"><span>*</span></div>
+                    <div class="campo mensagem"><textarea id="mensagem" name="mensagem"
+                            placeholder="Mensagem"></textarea><span>*</span></div>
+                    <button type="submit" class="btn-enviar">Enviar formulário</button>
+                </form>
+                <div class="mensagem-sucesso"><span>✓</span>
+                    <p>Mensagem enviada com sucesso!</p>
+                </div>
+            </div>
+        </div>
+        <div class="contato-decoracao"><span class="decoracao-circulo circulo-contato-1"></span><span
+                class="decoracao-circulo circulo-contato-2"></span><span
+                class="decoracao-linha linha-contato-1"></span><span class="decoracao-linha linha-contato-2"></span>
+        </div>
+        <img src="Imagens/ESP32.png" alt="ESP32">
+    </section>
+    <!--==========================================================================================-->
+    <!-- FOOTER -->
+    <footer>
+        <section>
+            <div>
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="Imagens/Logo Branco.png" alt="Logo MotorSolutions">
+                        <p>Monitoramento inteligente para transformar dados dos seus motores em decisões mais rápidas e
+                            seguras.</p>
+                        <div class="footer-social">
+                            <a href="" aria-label="YouTube"><img src="Imagens/Icone_YouTube.png" alt="YouTube"></a>
+                            <a href="" aria-label="Instagram"><img src="Imagens/Icone_Instagram.png"
+                                    alt="Instagram"></a>
+                            <a href="" aria-label="TikTok"><img src="Imagens/Icone_TikTok.png" alt="TikTok"></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="recursos">
+                            <h2>Empresa</h2>
+                            <a href="#contato">Contato</a>
+                            <a href="#solucoes">Sobre nós</a>
+                            <a href="#contato">Central de Ajuda</a>
+                            <a href="#servicos">Recursos</a>
+                        </div>
+                        <div class="solution">
+                            <h2>Soluções</h2>
+                            <a href="#servicos">Monitoramento</a>
+                            <a href="#solucoes">Sensores</a>
+                            <a href="#solucoes">Iot Industrial</a>
+                            <a href="#servicos">Dados em tempo real</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 MotorSolutions. Todos os direitos reservados.</p>
+                    <p>IoT • Monitoramento • Tecnologia</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
