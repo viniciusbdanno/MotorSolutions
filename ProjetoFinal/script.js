@@ -10,7 +10,7 @@ if (formulario) {
             mensagem: document.querySelector("#mensagem").value
         };
         try {
-            const resposta = await fetch("/api/contato", {
+            const resposta = await fetch("http://localhost:3000/api/contato", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -54,17 +54,18 @@ if (texto) {
             }
             setTimeout(escrever, 120);
         } else {
-            texto.textContent = palavra.substring(0, letraAtual - 1);
-            letraAtual--;
-            if (letraAtual === 0) {
+            if (letraAtual <= 1) {
                 apagando = false;
                 palavraAtual++;
                 if (palavraAtual === palavras.length) {
                     palavraAtual = 0;
                 }
+                letraAtual = 0;
                 setTimeout(escrever, 300);
                 return;
             }
+            letraAtual--;
+            texto.textContent = palavra.substring(0, letraAtual);
             setTimeout(escrever, 70);
         }
     }
