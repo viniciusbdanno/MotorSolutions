@@ -306,7 +306,7 @@ section {
 }
 
 .servicos-container {
-    width: min(1200px, 100%);
+    width: min(1360px, 100%);
     margin: 0 auto;
 }
 
@@ -1010,12 +1010,6 @@ footer nav {
     .header nav ul {
         gap: 15px;
     }
-
-    .header nav ul li:nth-child(3),
-    .header nav ul li:nth-child(4) {
-        display: none;
-    }
-
     #btn1,
     #btn2 {
         position: static;
@@ -1272,7 +1266,7 @@ footer nav {
 .solucoes-container {
     position: relative;
     z-index: 1;
-    width: min(1200px, 100%);
+    width: min(1360px, 100%);
     margin: 0 auto;
 }
 
@@ -1687,7 +1681,7 @@ footer nav {
 
     z-index: 2;
 
-    width: min(1200px, 100%);
+    width: min(1360px, 100%);
 
     margin: 0 auto;
 
@@ -1698,6 +1692,17 @@ footer nav {
     gap: 80px;
 
     align-items: center;
+}
+
+@media (max-width: 900px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contato-info {
+        max-width: 100%;
+    }
 }
 
 
@@ -2394,10 +2399,6 @@ footer nav {
         gap: 15px;
     }
 
-    .header nav ul li:nth-child(3),
-    .header nav ul li:nth-child(4) {
-        display: none;
-    }
 
     #btn1,
     #btn2 {
@@ -2876,5 +2877,26 @@ footer .footer-links{
     }
     footer .footer-brand p{
         font-size:14px;
+    }
+}
+/*------------------------------------------------------------------------------------------------*/
+/* TELAS GRANDES / ULTRA-WIDE */
+@media (min-width: 1600px) {
+    .servicos-container,
+    .solucoes-container,
+    .contato-container {
+        width: min(1500px, 100%);
+    }
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+    .hero-gallery {
+        max-width: 720px;
+    }
+
+    .header nav ul {
+        gap: clamp(25px, 3vw, 60px);
     }
 }
