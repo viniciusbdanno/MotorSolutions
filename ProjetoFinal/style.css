@@ -995,6 +995,7 @@ footer nav {
         min-height: 60px;
         padding: 8px 16px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .header>img {
@@ -1004,7 +1005,8 @@ footer nav {
     .header nav {
         width: 100%;
         justify-content: center;
-        margin: 6px 0 0 0;
+        gap: 18px;
+        margin: 10px 0 0 0;
     }
 
     .header nav ul {
@@ -1023,7 +1025,7 @@ footer nav {
     }
 
     #btn2 {
-        margin-left: 5px;
+        margin-left: 0;
     }
 
     .hero {
@@ -2383,6 +2385,7 @@ footer nav {
         min-height: 60px;
         padding: 8px 16px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .header>img {
@@ -2392,7 +2395,8 @@ footer nav {
     .header nav {
         width: 100%;
         justify-content: center;
-        margin: 6px 0 0 0;
+        gap: 18px;
+        margin: 10px 0 0 0;
     }
 
     .header nav ul {
@@ -2413,7 +2417,7 @@ footer nav {
     }
 
     #btn2 {
-        margin-left: 5px;
+        margin-left: 0;
     }
 
     .hero {
